@@ -1,0 +1,14 @@
+<h1 style="font-weight: 300; font-family: sans-serif;">Bonjour et bienvenue dans Le Studio !</h1>
+<span style="font-weight: 300; font-family: sans-serif;">Bonjour <%= @user.first_name %> <%= @user.last_name %>,</span><br>
+<br>
+<span style="font-weight: 300; font-family: sans-serif;">Toute l'équipe te souhaite la bienvenue dans le studio.</span><br>
+
+<span style="font-weight: 300; font-family: sans-serif;">Tu trouveras ici le récapitulatif des dates de la prochaine session.</span><br>
+<span style="font-weight: 300; font-family: sans-serif;">Voici tes identifiants de conexion.</span><br>
+<br>
+<span><span><strong>Email :</strong></span> <%= @user.email.capitalize %></span><br>
+<span><span><strong>Password :</strong><%= @user.password %></span><br>
+<br>
+<span style="font-weight: 300; font-family: sans-serif;">Nous vous remercions et restons à votre disposition en cas de besoin.</span><br>
+<br>
+<span style="font-weight: 300; font-family: sans-serif;">Toute l'équipe !</span>
