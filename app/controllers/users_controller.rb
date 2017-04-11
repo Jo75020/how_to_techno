@@ -1,10 +1,12 @@
 class UsersController < ApplicationController
   def create
-    User.create(user_params)
+    @user = User.create(user_params)
     redirect_to root_path
   end
 
-
+  def index
+    @user = current_user
+  end
   private
 
     def set_user
