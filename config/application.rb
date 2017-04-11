@@ -20,6 +20,7 @@ module HowToTechno
   class Application < Rails::Application
     config.generators do |generate|
       generate.assets false
+      config.assets.initialize_on_precompile = false
     end
 
     # Settings in config/environments/* take precedence over those specified here.
