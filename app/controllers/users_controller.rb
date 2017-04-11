@@ -4,8 +4,10 @@ class UsersController < ApplicationController
     redirect_to root_path
   end
 
-
-private
+  def index
+    redirect_to root_path
+  end
+  private
 
     def set_user
       @user = User.find(params[:id])
