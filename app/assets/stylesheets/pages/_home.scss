@@ -10,7 +10,7 @@
   background-size: cover !important;
   background-image: -webkit-linear-gradient(top right, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%);
   background-image: -o-linear-gradient(top right, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%);
-  background-image: linear-gradient(to bottom left, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('background-home.jpg');
+  background-image: linear-gradient(to bottom left, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -230,7 +230,6 @@ a.link-big {
 }
 
 .banner-form {
-  background-image: url('banner-form.jpg');
   background-size: cover !important;
   -webkit-box-flex: 1;
   -ms-flex: 1;
