@@ -1,4 +1,4 @@
-<div class="navbar-wagon">
+<div class="navbar-wagon" id="nav">
   <!-- Logo -->
   <%= link_to root_path, class: "navbar-wagon-brand" do %>
     <%= image_tag "logo.png" %>
@@ -7,70 +7,60 @@
   <!-- Right Navigation -->
   <div class="navbar-wagon-right hidden-xs hidden-sm">
 
-    <!-- Search form -->
-    <form action="" class="navbar-wagon-search">
-      <input type="text" class="navbar-wagon-search-input" placeholder="Search something">
-      <button type="submit" class="navbar-wagon-search-btn">
-        <i class="fa fa-search"></i>
-      </button>
-    </form>
+    <!-- Button (call-to-action) -->
+    <%#= link_to t(".top_call_to_action", default: "Events"), events_path, class: "navbar-wagon-item navbar-wagon-link" %>
+
+    <%= link_to 'https://www.facebook.com/', target: "_blank" do %>
+      <i class="fa fa-facebook" style="margin-right: 10px" aria-hidden="true"></i>
+    <% end %>
+
+    <%= mail_to "therhythmandsoul@gmail.com " do %>
+      <i class="fa fa-envelope-o" style="margin-right: -7px" aria-hidden="true"></i>
+    <% end %>
 
     <!-- Different navigation if login or not -->
     <% if user_signed_in? %>
 
-      <!-- Notification -->
-      <%= link_to "#", class: "navbar-wagon-item navbar-wagon-link" do %>
-        <div class="badge-container">
-          <i class="fa fa-envelope-o"></i>
-          <div class="badge badge-blue">3</div>
-        </div>
-      <% end %>
-
       <!-- Profile picture and dropdown -->
       <div class="navbar-wagon-item">
-        <div class="dropdown">
-          <%= image_tag "http://placehold.it/30x30", class: "avatar dropdown-toggle", id: "navbar-wagon-menu", "data-toggle" => "dropdown" %>
-          <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
-            <li>
-              <%= link_to "#" do %>
-                <i class="fa fa-user"></i> <%= t(".profile", default: "Profile") %>
-              <% end %>
-            </li>
-            <li>
-              <%= link_to "#" do %>
-                <i class="fa fa-home"></i>  <%= t(".profile", default: "Home") %>
-              <% end %>
-            </li>
-            <li>
-              <%= link_to destroy_user_session_path, method: :delete do %>
-                <i class="fa fa-sign-out"></i>  <%= t(".sign_out", default: "Log out") %>
-              <% end %>
-            </li>
-          </ul>
+        <div class="dropdown" onclick="myFunction()">
+          <%#= image_tag current_user.image, class: "avatar dropbtn", id: "navbar-wagon-menu", "data-toggle" => "dropdown" %>
+          <div id="myDropdown" class="dropdown-content">
+            <%= link_to destroy_user_session_path, method: :delete do %>
+              <i class="fa fa-sign-out" style="margin-right: 2px;"></i><%= t(".sign_out", default: "Log out") %>
+            <% end %>
+          </div>
         </div>
+        <% else %>
+        <%#= link_to 'Sign in with Spotify', user_spotify_omniauth_authorize_path, class: 'login-event-index' %>
+        <% end %>
       </div>
 
-    <% else %>
 
-      <!-- Login text link -->
-      <%= link_to t(".sign_in", default: "Login"), new_user_session_path, class: "navbar-wagon-item navbar-wagon-link" %>
 
-    <% end %>
-
-    <!-- Button (call-to-action) -->
-    <%= link_to t(".top_call_to_action", default: "Post stuff"), "#", class: "navbar-wagon-item navbar-wagon-button btn" %>
   </div>
 
-  <!-- Dropdown list appearing on mobile only -->
-  <div class="navbar-wagon-item hidden-md hidden-lg">
-    <div class="dropdown">
-      <i class="fa fa-bars dropdown-toggle" data-toggle="dropdown"></i>
-      <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
-        <li><a href="#">Some mobile link</a></li>
-        <li><a href="#">Other one</a></li>
-        <li><a href="#">Other one</a></li>
-      </ul>
-    </div>
-  </div>
 </div>
 
+<% content_for(:dropdown_js) do %>
+<script>
+    /* When the user clicks on the button,
+  toggle between hiding and showing the dropdown content */
+  function myFunction() {
+      document.getElementById("myDropdown").classList.toggle("show");
+  }
+  // Close the dropdown menu if the user clicks outside of it
+  window.onclick = function(event) {
+    if (!event.target.matches('.dropbtn')) {
+      var dropdowns = document.getElementsByClassName("dropdown-content");
+      var i;
+      for (i = 0; i < dropdowns.length; i++) {
+        var openDropdown = dropdowns[i];
+        if (openDropdown.classList.contains('show')) {
+          openDropdown.classList.remove('show');
+        }
+      }
+    }
+  }
+</script>
+<% end %>

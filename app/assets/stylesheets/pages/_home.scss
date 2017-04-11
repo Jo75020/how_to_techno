@@ -2,3 +2,297 @@
  * CSS code specific to home page
  * (margin/padding adjustments)
  * ------------------------------------- */
+.banner {
+  color: white;
+  text-align: center;
+  height: 400px;
+  /* if you have a 70px navbar => height: calc(100vh - 70px); */
+  background-size: cover !important;
+  background-image: -webkit-linear-gradient(top right, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%);
+  background-image: -o-linear-gradient(top right, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%);
+  background-image: linear-gradient(to bottom left, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('background-home.jpg');
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 400px;
+  padding: 0px;
+  background-position: center center;
+  position: relative;
+  z-index: 1;
+  border-radius: 4px;
+  overflow: hidden;
+}
+.banner h1 {
+  font-weight: 900;
+  text-shadow: 2px 1px 3px rgba(0,0,0,0.1);
+  color: white;
+  letter-spacing: -1px;
+  font-size: 45px;
+  margin-bottom: 10px;
+}
+
+.banner-gradient h1 strong {
+    -webkit-animation: boxShadow 0.3s 1s cubic-bezier(0, 0, 0, 1.25) forwards;
+    animation: boxShadow 0.3s 1s cubic-bezier(0, 0, 0, 1.25) forwards;
+}
+
+.banner p {
+  font-size: 23px;
+  margin: 0;
+  text-align: center;
+  padding: 20px;
+  font-weight: 100;
+  color: rgba(255,255,255,0.95);
+}
+
+.banner-button {
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.banner-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 1;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.banner-button a {
+    margin: 0 10px;
+}
+
+.banner-button-item {
+  color: #7C7C7C;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-weight: 900;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 20px 30px;
+  font-size: 16px;
+  border-radius: 4px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.07);
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  background: white;
+}
+
+.banner-button .btn-danger{
+    box-shadow: 0 1px 2px rgba(0,0,0,0.07);
+    border: none;
+    background-color: #3A606E;
+    border-radius: 4px;
+    color: white;
+    text-shadow: 0px 2px rgba(0,0,0,0.15);
+}
+
+
+.section-title-home {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 900;
+  letter-spacing: -2px;
+  border-bottom: 1px solid #E0E0E0;
+  height: 7px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 2em 40px 1em 40px;
+  z-index: 1;
+}
+
+.section-title-home-content {
+  background-color: #F4F4F4;
+  position: relative;
+  padding-right: 30px;
+  padding-left: 30px;
+}
+
+.feature {
+  padding: 40px;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 33%;
+  flex: 0 0 33%;
+  padding-bottom: 0;
+}
+
+.feature-body {
+  font-weight: 100;
+  min-height: 200px;
+}
+
+.features-wrapper .feature-body {
+    font-size: 16px;
+  }
+
+.feature-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-bottom: 20px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-weight: 900;
+  font-size: 20px;
+}
+
+.feature-title {
+  font-size: 18px;
+  margin: 0px;
+  margin-left: 10px;
+}
+
+.feature i {
+
+  display: inline-block;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-transform: translate(0, 0);
+  transform: translate(0, 0);
+}
+
+.up {
+  position: relative;
+  margin-top: -230px;
+  padding-top: 200px;
+}
+
+.features-wrapper {
+  background-color: #F4F4F4;
+  padding-bottom: 100px;
+}
+
+.feature-body a {
+    border-bottom: 3px solid rgba(106,216,106,0.6);
+    box-shadow: inset 0 -5px 0 rgba(106,216,106,0.38);
+    -webkit-transition: background .2s ease;
+    transition: background .2s ease;
+    height: 20px;
+    display: inline-block;
+}
+
+a, a:focus {
+    outline: 0;
+    text-decoration: none;
+    color: inherit;
+}
+
+a {
+    color: #469AE0;
+    text-decoration: none;
+}
+
+a {
+    background-color: transparent;
+}
+
+a.link-big {
+    border-bottom: 3px solid rgba(106,216,106,0.6);
+    box-shadow: inset 0 -8px 0 rgba(106,216,106,0.55);
+    -webkit-transition: background .2s ease;
+    transition: background .2s ease;
+    height: 31px;
+    font-size: 29px;
+    display: inline-block;
+    font-size: 22px;
+    color: #5E5757;
+    font-weight: 700;
+}
+
+.home-form-wrapper {
+    background: white;
+    padding: 30px 0;
+    padding-bottom: 80px;
+}
+
+.banner-form {
+  background-image: url('banner-form.jpg');
+  background-size: cover !important;
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  height: 200px;
+  border-radius: 0;
+  font-size: 23px;
+  margin: 0;
+  text-align: center;
+  padding: 20px;
+  font-weight: 100;
+  color: rgba(255,255,255,0.95);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 400px;
+  padding: 0px;
+  background-position: center center;
+  position: relative;
+  z-index: 1;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.banner-form h2 {
+  font-weight: 900;
+  text-shadow: 2px 1px 3px rgba(0,0,0,0.1);
+  color: white;
+  letter-spacing: -1px;
+  font-size: 45px;
+  margin-bottom: 10px;
+}
+
+.apply-form-row-first {
+    color: white;
+    background: #469AE0;
+}
+
+.apply-form-row {
+    width: 100%;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: space-around;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    border-bottom: 1px solid rgba(0,0,0,0.06);
+    padding: 30px 20px;
+    -webkit-transition: -webkit-transform .3s ease;
+    transition: -webkit-transform .3s ease;
+    transition: transform .3s ease;
+    transition: transform .3s ease, -webkit-transform .3s ease;
+    border-left: 0px solid black;
+    -webkit-transition: .3s ease border-left;
+    transition: .3s ease border-left;
+}
+
+.form-body {
+  background-color: #F4F4F4;
+}

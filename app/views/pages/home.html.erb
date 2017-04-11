@@ -1,2 +1,112 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="banner" ">
+        <div class="banner-content">
+          <h1>Changez de vie : apprenez à mixer</h1>
+          <p>Le Studio apporte un <strong>savoir-faire</strong> technique aux <strong>esprits créatifs.</strong></p>
+        </div>
+      </div>
+      <div class="banner-button">
+          <a class="banner-button-item hidden-xs" href="/programme">Découvrez notre programme</a>
+          <a class="btn banner-button-item btn-danger btn-lg" href="/postuler">Postulez pour être les premiers</a>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="features-wrapper up">
+  <div class="container">
+    <div class="row">
+      <h2 class="section-title-home">
+        <div class="section-title-home-content" style="font-size:30px;">
+          Mixez <i>the bomb track</i>
+        </div>
+      </h2>
+    <div class="col-xs-12 col-md-4">
+      <div class="feature">
+        <div class="feature-header">
+          <div class="feature-icon">
+            <i class="fa fa-music" style="color: #FE5F55;" aria-hidden="true"></i>
+          </div>
+          <h2 class="feature-title">
+            <strong>Apprenez le son qui tue</strong>
+          </h2>
+        </div>
+        <div class="feature-body">
+          Maîtrisez ruby, SQL, et le framework Rails pour construire des applications web.Apprenez des techniques de design avancées en CSS.
+          Plongez dans Javascript et explorez jQuery ou encore React.js,
+          la dernière librairie Javascript développée par Facebook.
+        </div>
+      </div>
+    </div>
+    <div class="col-xs-12 col-md-4">
+      <div class="feature">
+        <div class="feature-header">
+          <div class="feature-icon">
+          <i class="fa fa-headphones" style="color: #8000FF;" aria-hidden="true"></i>
+          </div>
+          <h2 class="feature-title">
+            <strong>Devenez le meilleur dj</strong>
+          </h2>
+        </div>
+        <div class="feature-body">
+          Maîtrisez ruby, SQL, et le framework Rails pour construire des applications web.Apprenez des techniques de design avancées en CSS.
+          Plongez dans Javascript et explorez jQuery ou encore React.js,
+          la dernière librairie Javascript développée par Facebook.
+
+        </div>
+      </div>
+    </div>
+    <div class="col-xs-12 col-md-4">
+      <div class="feature">
+        <div class="feature-header">
+          <div class="feature-icon">
+          <i class="fa fa-play" style="color: #2ecc71;" aria-hidden="true"></i>
+          </div>
+          <h2 class="feature-title">
+            <strong>Sortez les meilleurs tracks</strong>
+          </h2>
+        </div>
+        <div class="feature-body">
+          Maîtrisez ruby, SQL, et le framework Rails pour construire des applications web.Apprenez des techniques de design avancées en CSS.
+          Plongez dans Javascript et explorez jQuery ou encore React.js,
+          la dernière librairie Javascript développée par Facebook.
+          <a href="/programme">Plus d'infos.</a>
+        </div>
+      </div>
+    </div>
+    </div>
+    <div class="text-center" style="margin-top: 50px;">
+      <a class="link-big" href="/programme">Lire le programme</a>
+    </div>
+  </div>
+</div>
+
+<div class="home-form-wrapper">
+  <div class="container">
+    <div class="row">
+    <div class="col-md-6">
+    <div class="form-body">
+    <div class="banner-form">
+      <h2>Postulez à Paris</h2>
+    </div>
+        <%= simple_form_for(@user) do |f| %>
+        <%= f.error_notification %>
+
+        <div class="apply-form-row">
+          <%= f.input :first_name, required: true, autofocus: true %>
+          <%= f.input :last_name, required: true, autofocus: true %>
+          <%= f.input :email, required: true, autofocus: true %>
+          <%= f.input :password, required: true, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length) %>
+          <%= f.input :password_confirmation, required: true %>
+        </div>
+
+        <div class="apply-form-row">
+          <%= f.button :submit, "Sign up" %>
+        </div>
+      <% end %>
+    </div>
+    </div>
+    </div>
+  </div>
+</div>
