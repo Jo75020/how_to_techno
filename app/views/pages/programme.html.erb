@@ -17,24 +17,119 @@
 
 
 <div class="features-wrapper up">
-  <div class="container">
-    <div class="row">
       <h2 class="section-title-home">
         <div class="section-title-home-content" style="font-size:30px;">
           <strong>2 semaines intensives - 10 heures/jour de prod</strong>
         </div>
       </h2>
         <p style="font-size: 20px !important;font-weight: 100 !important;position: relative;z-index: 1;text-align: center;color: #363636 !important;">Apprenez toute la partie technique. De la composition du son au séquenceur.</p>
-    <div class="col-md-4">
+
+
+   <div class="container">
+   <div class="row">
+   <div class="full-programme" style="padding: 20px; margin-top: 30px;">
+    <div class="col-md-3  wrapper-programme">
+    <div id="first-tab-left">
+    <p>1 - Programme Mix</p>
+    </div>
+    <div id="second-tab-left">
+    <p>2 - Programme Prod (MAO)</p>
+    </div>
+    <div id="third-tab-left">
+    <p>3 - Programme Prod (Video)</p>
+    </div>
 
     </div>
-    <div class="col-md-8">
+    <div class="col-md-9">
+    <div class="first-tab">
+    <div class="feature" style="padding: 10px">
+        <div class="feature-header">
+          <div class="feature-icon">
+          <i class="fa fa-headphones" style="color: #8000FF;" aria-hidden="true"></i>
+          </div>
+          <h2 class="feature-title">
+            <strong>Programme Mix</strong>
+          </h2>
+        </div>
+        <div class="feature-body">
+          Maîtrisez ruby, SQL, et le framework Rails pour construire des applications web.Apprenez des techniques de design avancées en CSS.
+          Plongez dans Javascript et explorez jQuery ou encore React.js,
+          la dernière librairie Javascript développée par Facebook.
+
+        </div>
+      </div>
+    </div>
+    <div class="second-tab hidden">
+    <div class="feature" style="padding: 10px">
+        <div class="feature-header">
+          <div class="feature-icon">
+          <i class="fa fa-play" style="color: #2ecc71;" aria-hidden="true"></i>
+          </div>
+          <h2 class="feature-title">
+            <strong>Programme Prod (MAO)</strong>
+          </h2>
+        </div>
+        <div class="feature-body">
+          Maîtrisez ruby, SQL, et le framework Rails pour construire des applications web.Apprenez des techniques de design avancées en CSS.
+          Plongez dans Javascript et explorez jQuery ou encore React.js,
+          la dernière librairie Javascript développée par Facebook.
+        </div>
+      </div>
+    </div>
+    <div class="third-tab hidden">
+    <div class="feature" style="padding: 10px">
+        <div class="feature-header">
+          <div class="feature-icon">
+            <i class="fa fa-music" style="color: #FE5F55;" aria-hidden="true"></i>
+          </div>
+          <h2 class="feature-title">
+            <strong>Programme Prod (Video)</strong>
+          </h2>
+        </div>
+        <div class="feature-body">
+          Maîtrisez ruby, SQL, et le framework Rails pour construire des applications web.Apprenez des techniques de design avancées en CSS.
+          Plongez dans Javascript et explorez jQuery ou encore React.js,
+          la dernière librairie Javascript développée par Facebook.
+        </div>
+      </div>
+    </div>
 
     </div>
     </div>
-    </div>
-    <div class="text-center" style="margin-top: 50px;">
+    <div class="col-md-12 text-center" style="margin-top: 50px;">
     <%= link_to "Retourner à la page d'acceuil", root_path, class: "link-big"%>
     </div>
   </div>
+  </div>
 </div>
+
+
+
+
+<% content_for(:after_js) do %>
+<script type="text/javascript">
+    $(document).ready(function () {
+
+    $('#first-tab-left').click(function () {
+    $('.first-tab').removeClass('hidden');
+    $('.second-tab').addClass('hidden');
+    $('.third-tab').addClass('hidden');
+    $('.fourth-tab').addClass('hidden');
+    });
+    $('#second-tab-left').click(function () {
+    $('.first-tab').addClass('hidden');
+    $('.second-tab').removeClass('hidden');
+    $('.third-tab').addClass('hidden');
+    $('.fourth-tab').addClass('hidden');
+    });
+
+    $('#third-tab-left').click(function () {
+    $('.first-tab').addClass('hidden');
+    $('.second-tab').addClass('hidden');
+    $('.third-tab').removeClass('hidden');
+    $('.fourth-tab').addClass('hidden');
+    });
+
+    });
+</script>
+<% end %>

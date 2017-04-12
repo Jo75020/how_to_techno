@@ -1,0 +1,20 @@
+.wrapper-programme p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 15px;
+  font-weight: 300;
+  color: black;
+  font-size: 12px;
+  letter-spacing: 1.4px;
+  cursor: pointer;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-transform: uppercase;
+  border-right: 1px dashed #333333;
+}
+
+.wrapper-programme :hover p {
+  border-right: 1px solid #333333;
+}
