@@ -315,8 +315,6 @@ a.link-big {
     -ms-flex-align: center;
     align-items: center;
     padding: 10px 15px;
-    position: relative;
-    float: right;
 }
 
 .card-user-batch {
@@ -352,14 +350,29 @@ a.link-big {
     -webkit-box-flex: 1;
     -ms-flex: 1;
     flex: 1;
-    border-left: 1px solid rgba(116, 112, 112, 0.44);
-    border-bottom: 1px solid rgba(116, 112, 112, 0.44);
+    border-left: 1px dashed rgba(116, 112, 112, 0.44);
+    border-bottom: 1px dashed rgba(116, 112, 112, 0.44);
     border-radius: 5px;
+    width: 100%;
 }
+
 
 .full-home-testimonials {
   margin-top: 50px;
+  display: flex;
+  justify-content: flex-start;
 }
+
+.home-testimonial {
+  width: 81%;
+}
+
+.home-testimonial :hover {
+  border-left: 1px solid rgba(116, 112, 112, 0.44);
+  border-bottom: 1px solid rgba(116, 112, 112, 0.44);
+  border-radius: 5px;
+}
+
 
 #new_info {
   justify-content: space-around;
@@ -375,3 +388,4 @@ a.link-big {
   padding: 1px 5px 1px 5px;
   font-weight: lighter;
 }
+

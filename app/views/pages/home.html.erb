@@ -85,7 +85,7 @@
 <div class="home-form-wrapper">
   <div class="container">
     <div class="row">
-    <div class="col-md-5">
+    <div class="col-md-12">
       <div class="form-body">
         <div class="banner-form"  style="background-image: url('<%= image_path "banner-form.jpg" %>');">
           <h2>Postulez à Paris</h2>
@@ -93,34 +93,33 @@
           <%= simple_form_for(@info) do |f| %>
             <%= f.error_notification %>
             <div id='first_name'>
-            <%= f.input :first_name, label: 'Ton Prénom', class: "input-form-home"%>
+            <%= f.input :first_name, required: true , label: 'Ton Prénom', class: "input-form-home"%>
             </div>
-
             <div id='last_name' class="hidden">
-            <%= f.input :last_name, label: 'Ton Nom', class: "input-form-home"%>
+            <%= f.input :last_name, required: true , label: 'Ton Nom', class: "input-form-home"%>
             </div>
             <div id='email' class="hidden">
-            <%= f.input :email, label: 'Ton Email', class: "input-form-home" %>
+            <%= f.input :email, required: true , label: 'Ton Email', class: "input-form-home" %>
             </div>
             <div id='phone' class="hidden">
-            <%= f.input :phone, label: 'Un Telephone', class: "input-form-home" %>
+            <%= f.input :phone, required: true , label: 'Un Telephone', class: "input-form-home" %>
             </div>
             <div id='city' class="hidden">
-            <%= f.input :city, label: 'Ta ville de résidence', class: "input-form-home" %>
+            <%= f.input :city, required: true , label: 'Ta ville de résidence', class: "input-form-home" %>
             </div>
             <div id='birthday' class="hidden">
-            <%= f.input :birthday, label: 'Ton année de naissance', class: "input-form-home" %>
+            <%= f.input :birthday, required: true , label: 'Ton année de naissance', class: "input-form-home" %>
             </div>
             <div id='description' class="hidden">
-            <%= f.input :description, label: 'Ta description', class: "input-form-home" %>
+            <%= f.input :description, required: true , label: 'Ta description', class: "input-form-home" %>
             </div>
             <div id='motivation' class="hidden">
-            <%= f.input :motivation, label: 'Tes motivations', class: "input-form-home" %>
+            <%= f.input :motivation, required: true , label: 'Tes motivations', class: "input-form-home" %>
             </div>
             <div id='submit' class="hidden">
             <%= f.button :submit, label: 'Merci !' %>
             </div>
-            <div class="go-to-last-name">
+            <div class="go-to-last-name hidden">
             <span style="margin: 0px; font-weight: 100; font-size: 18px;cursor: alias;">Suivant</span>
           </div>
           <% end %>
@@ -128,66 +127,82 @@
           </div>
       </div>
     </div>
-        <div class="col-md-1"></div>
-    <div class="col-md-6">
-    <div class="home-infos-wrapper">
-      <h2 class="section-title-home">
-        <div class="section-title-home-content-bottom" style="font-size:30px; background:white;padding-right: 25px;padding-left: 25px;">
-          Ils font confiance au <i>Studio</i>
-        </div>
-      </h2>
-    <div class="full-home-testimonials">
-      <div class="card-student">
-        <div class="card-user">
-                <img width="50" height="50" srcset="https://res.cloudinary.com/wagon/image/upload/c_fill,h_50,w_50/v1481221696/nfpdxxqiguuljq0jttua.jpg 1x, https://res.cloudinary.com/wagon/image/upload/c_fill,h_100,w_100/v1481221696/nfpdxxqiguuljq0jttua.jpg 2x" src="https://res.cloudinary.com/wagon/image/upload/c_fill,h_50,w_50/v1481221696/nfpdxxqiguuljq0jttua.jpg" alt="Nfpdxxqiguuljq0jttua">
-                <div class="card-user-info">
-                  <div class="card-user-name">
-                    Michèle  de Bruyn
-                  </div>
-                  <div class="card-user-batch">
-                    Batch #3, Paris
-                  </div>
-                </div>
-        </div>
-      </div>
-
-      <div class="home-testimonial">
-      <div class="testimonial-card">
-        <p>" C'était génial j'ai appris plein de truc. Il y aura clairement un avant et un aprés Le Studio cela a changé ma vie "</p>
-      </div>
-      </div>
-    </div>
-    <div class="full-home-testimonials">
-      <div class="card-student">
-        <div class="card-user">
-        <img width="50" height="50" srcset="https://res.cloudinary.com/wagon/image/upload/c_fill,h_50,w_50/v1473854652/qsbhptcsbur4evy59p8o.jpg 1x, https://res.cloudinary.com/wagon/image/upload/c_fill,h_100,w_100/v1473854652/qsbhptcsbur4evy59p8o.jpg 2x" src="https://res.cloudinary.com/wagon/image/upload/c_fill,h_50,w_50/v1473854652/qsbhptcsbur4evy59p8o.jpg" alt="Qsbhptcsbur4evy59p8o">
-                <div class="card-user-info">
-                  <div class="card-user-name">
-                    Julien da Silva
-                  </div>
-                  <div class="card-user-batch">
-                    Batch #2, Paris
-                  </div>
-                </div>
-        </div>
-      </div>
-
-      <div class="home-testimonial">
-      <div class="testimonial-card">
-        <p>" Un incroyable voyage qui m'a permis d'acquérir des compétences dans un domaine nouveau et inconnu. Une expérience humaine extrêmement enrichissante, en bref : génial. "</p>
-      </div>
-      </div>
-    </div>
-    </div>
-    </div>
-  </div>
+</div>
 </div>
 
+<div class="container">
+<div class="row">
+      <div class="col-md-12">
+      <div class="home-infos-wrapper">
+        <h2 class="section-title-home">
+          <div class="section-title-home-content-bottom" style="font-size:30px; background:white;padding-right: 25px;padding-left: 25px;">
+            Ils font confiance au <i>Studio</i>
+          </div>
+        </h2>
+      <div class="full-home-testimonials">
+
+        <div class="home-testimonial">
+        <div class="testimonial-card">
+          <span style="border: none;">" C'était génial j'ai appris plein de truc. Il y aura clairement un avant et un aprés Le Studio cela a changé ma vie, maintenant je suis comme David Guetta "</span>
+        </div>
+        </div>
+        <div class="card-student">
+          <div class="card-user">
+                  <img width="50" height="50" srcset="https://res.cloudinary.com/wagon/image/upload/c_fill,h_50,w_50/v1481221696/nfpdxxqiguuljq0jttua.jpg 1x, https://res.cloudinary.com/wagon/image/upload/c_fill,h_100,w_100/v1481221696/nfpdxxqiguuljq0jttua.jpg 2x" src="https://res.cloudinary.com/wagon/image/upload/c_fill,h_50,w_50/v1481221696/nfpdxxqiguuljq0jttua.jpg" alt="Nfpdxxqiguuljq0jttua">
+                  <div class="card-user-info">
+                    <div class="card-user-name">
+                      Michèle  de Bruyn
+                    </div>
+                    <div class="card-user-batch">
+                      Batch #3, Paris
+                    </div>
+                  </div>
+          </div>
+        </div>
+
+
+
+      </div>
+      <div class="full-home-testimonials">
+
+        <div class="home-testimonial">
+        <div class="testimonial-card">
+          <span style="border: none;">" Un incroyable voyage qui m'a permis d'acquérir des compétences dans un domaine nouveau et inconnu. Une expérience humaine extrêmement enrichissante, en bref : génial. "</span>
+        </div>
+        </div>
+
+        <div class="card-student">
+          <div class="card-user">
+          <img width="50" height="50" srcset="https://res.cloudinary.com/wagon/image/upload/c_fill,h_50,w_50/v1473854652/qsbhptcsbur4evy59p8o.jpg 1x, https://res.cloudinary.com/wagon/image/upload/c_fill,h_100,w_100/v1473854652/qsbhptcsbur4evy59p8o.jpg 2x" src="https://res.cloudinary.com/wagon/image/upload/c_fill,h_50,w_50/v1473854652/qsbhptcsbur4evy59p8o.jpg" alt="Qsbhptcsbur4evy59p8o">
+                  <div class="card-user-info">
+                    <div class="card-user-name">
+                      Julien da Silva
+                    </div>
+                    <div class="card-user-batch">
+                      Batch #2, Paris
+                    </div>
+                  </div>
+          </div>
+        </div>
+
+      </div>
+      </div>
+      </div>
+    </div>
+</div>
 
 
 <% content_for(:after_js) do %>
 <script type="text/javascript">
     $(document).ready(function () {
+
+        $("#info_first_name").hover(function(){
+            $( ".go-to-last-name" ).fadeTo( "slow" , 1, function() {
+            $(".go-to-last-name").removeClass("hidden");
+  });
+
+        });
+
         $('.go-to-last-name').click(function () {
             $('#first_name').addClass('hidden');
             $('#last_name').removeClass('hidden');
