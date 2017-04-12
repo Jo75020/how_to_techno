@@ -6,7 +6,6 @@
   color: white;
   text-align: center;
   height: 400px;
-  /* if you have a 70px navbar => height: calc(100vh - 70px); */
   background-size: cover !important;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -22,8 +21,8 @@
   position: relative;
   z-index: 1;
   border-radius: 4px;
-  overflow: hidden;
 }
+
 .banner h1 {
   font-weight: 900;
   text-shadow: 2px 1px 3px rgba(0,0,0,0.1);
@@ -88,7 +87,7 @@
   background: white;
 }
 
-.banner-button .btn-danger{
+.banner-button .btn-danger {
     box-shadow: 0 1px 2px rgba(0,0,0,0.07);
     border: none;
     background-color: #3A606E;
@@ -124,6 +123,14 @@
   position: relative;
   padding-right: 30px;
   padding-left: 30px;
+}
+
+.section-title-home-content-bottom {
+  background: white;
+  position: relative;
+  padding-right: 30px;
+  padding-left: 30px;
+  z-index: 1;
 }
 
 .feature {
@@ -221,7 +228,7 @@ a.link-big {
 }
 
 .home-form-wrapper {
-    background: white;
+    background: black;
     padding: 30px 0;
     padding-bottom: 80px;
 }

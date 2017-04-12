@@ -8,8 +8,8 @@
         </div>
       </div>
       <div class="banner-button">
-          <a class="banner-button-item hidden-xs" href="/programme">Découvrez notre programme</a>
-          <a class="btn banner-button-item btn-danger btn-lg" href="/postuler">Postulez pour être les premiers</a>
+          <a class="banner-button-item hidden-xs" href="/">Découvrez notre programme</a>
+          <a class="btn banner-button-item btn-danger btn-lg" href="/">Postulez pour être les premiers</a>
       </div>
     </div>
   </div>
@@ -71,7 +71,7 @@
           Maîtrisez ruby, SQL, et le framework Rails pour construire des applications web.Apprenez des techniques de design avancées en CSS.
           Plongez dans Javascript et explorez jQuery ou encore React.js,
           la dernière librairie Javascript développée par Facebook.
-          <a href="/programme">Plus d'infos.</a>
+          <a href="/">Plus d'infos.</a>
         </div>
       </div>
     </div>
@@ -86,27 +86,46 @@
   <div class="container">
     <div class="row">
     <div class="col-md-6">
-    <div class="form-body">
-    <div class="banner-form"  style="background-image: url('<%= image_path "banner-form.jpg" %>');">
-      <h2>Postulez à Paris</h2>
+      <div class="form-body">
+        <div class="banner-form"  style="background-image: url('<%= image_path "banner-form.jpg" %>');">
+          <h2>Postulez à Paris</h2>
+        </div>
+          <%= simple_form_for(@info) do |f| %>
+            <%= f.error_notification %>
+            <%= f.input :first_name %>
+            <%= f.input :last_name %>
+            <%= f.input :email %>
+            <%= f.input :phone %>
+            <%= f.input :city %>
+            <%= f.input :birthday %>
+            <%= f.input :description %>
+            <%= f.input :motivation %>
+            <%= f.button :submit %>
+          <% end %>
+      </div>
     </div>
-        <%= simple_form_for(@user) do |f| %>
-        <%= f.error_notification %>
-
-        <div class="apply-form-row">
-          <%= f.input :first_name, required: true, autofocus: true %>
-          <%= f.input :last_name, required: true, autofocus: true %>
-          <%= f.input :email, required: true, autofocus: true %>
-          <%= f.input :password, required: true, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length) %>
-          <%= f.input :password_confirmation, required: true %>
+    <div class="col-md-6">
+    <div class="home-infos-wrapper">
+      <h2 class="section-title-home">
+        <div class="section-title-home-content-bottom" style="font-size:30px; background:white;padding-right: 25px;padding-left: 25px;">
+          Ils font confiance au <i>Studio</i>
         </div>
-
-        <div class="apply-form-row">
-          <%= f.button :submit, "Sign up" %>
-        </div>
-      <% end %>
+      </h2>
+    <div class="card-student">
+      <div class="card-user">
+              <img width="50" height="50" srcset="https://res.cloudinary.com/wagon/image/upload/c_fill,h_50,w_50/v1481221696/nfpdxxqiguuljq0jttua.jpg 1x, https://res.cloudinary.com/wagon/image/upload/c_fill,h_100,w_100/v1481221696/nfpdxxqiguuljq0jttua.jpg 2x" src="https://res.cloudinary.com/wagon/image/upload/c_fill,h_50,w_50/v1481221696/nfpdxxqiguuljq0jttua.jpg" alt="Nfpdxxqiguuljq0jttua">
+              <div class="card-user-info">
+                <div class="card-user-name">
+                  Michèle  de Bruyn
+                </div>
+                <div class="card-user-batch">
+                  Batch #3, Paris
+                </div>
+              </div>
+      </div>
     </div>
     </div>
     </div>
   </div>
 </div>
+
