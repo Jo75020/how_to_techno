@@ -3,7 +3,6 @@ class PagesController < ApplicationController
 
   def home
     @info  = Info.new
-    @infos = Info.all
   end
 
 
