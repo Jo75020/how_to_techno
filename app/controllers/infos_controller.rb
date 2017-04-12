@@ -2,22 +2,13 @@ class InfosController < ApplicationController
 skip_before_action :authenticate_user!
 def create
   @info = Info.new(info_params)
-  if @info.save
-  flash.now[:notice] = 'Message sent!'
-else
-  flash.now[:alert] = 'Error while sending message!'
-end
+  @info.save!
   redirect_to root_path
 
 end
 
 def update
-  @info = Info.new(info_params)
-  if @info.save
-  flash.now[:notice] = 'Message sent!'
-else
-  flash.now[:alert] = 'Error while sending message!'
-end
+  @info = Info.update(info_params)
   redirect_to root_path
 end
 
