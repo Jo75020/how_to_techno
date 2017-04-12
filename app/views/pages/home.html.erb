@@ -85,25 +85,50 @@
 <div class="home-form-wrapper">
   <div class="container">
     <div class="row">
-    <div class="col-md-6">
+    <div class="col-md-5">
       <div class="form-body">
         <div class="banner-form"  style="background-image: url('<%= image_path "banner-form.jpg" %>');">
           <h2>Postulez à Paris</h2>
-        </div>
+
           <%= simple_form_for(@info) do |f| %>
             <%= f.error_notification %>
-            <%= f.input :first_name %>
-            <%= f.input :last_name %>
-            <%= f.input :email %>
-            <%= f.input :phone %>
-            <%= f.input :city %>
-            <%= f.input :birthday %>
-            <%= f.input :description %>
-            <%= f.input :motivation %>
-            <%= f.button :submit %>
+            <div id='first_name'>
+            <%= f.input :first_name, label: 'Ton Prénom', class: "input-form-home"%>
+            </div>
+
+            <div id='last_name' class="hidden">
+            <%= f.input :last_name, label: 'Ton Nom', class: "input-form-home"%>
+            </div>
+            <div id='email' class="hidden">
+            <%= f.input :email, label: 'Ton Email', class: "input-form-home" %>
+            </div>
+            <div id='phone' class="hidden">
+            <%= f.input :phone, label: 'Un Telephone', class: "input-form-home" %>
+            </div>
+            <div id='city' class="hidden">
+            <%= f.input :city, label: 'Ta ville de résidence', class: "input-form-home" %>
+            </div>
+            <div id='birthday' class="hidden">
+            <%= f.input :birthday, label: 'Ton année de naissance', class: "input-form-home" %>
+            </div>
+            <div id='description' class="hidden">
+            <%= f.input :description, label: 'Ta description', class: "input-form-home" %>
+            </div>
+            <div id='motivation' class="hidden">
+            <%= f.input :motivation, label: 'Tes motivations', class: "input-form-home" %>
+            </div>
+            <div id='submit' class="hidden">
+            <%= f.button :submit, label: 'Merci !' %>
+            </div>
+            <div class="go-to-last-name">
+            <span style="margin: 0px; font-weight: 100; font-size: 18px;cursor: alias;">Suivant</span>
+          </div>
           <% end %>
+
+          </div>
       </div>
     </div>
+        <div class="col-md-1"></div>
     <div class="col-md-6">
     <div class="home-infos-wrapper">
       <h2 class="section-title-home">
@@ -111,17 +136,46 @@
           Ils font confiance au <i>Studio</i>
         </div>
       </h2>
-    <div class="card-student">
-      <div class="card-user">
-              <img width="50" height="50" srcset="https://res.cloudinary.com/wagon/image/upload/c_fill,h_50,w_50/v1481221696/nfpdxxqiguuljq0jttua.jpg 1x, https://res.cloudinary.com/wagon/image/upload/c_fill,h_100,w_100/v1481221696/nfpdxxqiguuljq0jttua.jpg 2x" src="https://res.cloudinary.com/wagon/image/upload/c_fill,h_50,w_50/v1481221696/nfpdxxqiguuljq0jttua.jpg" alt="Nfpdxxqiguuljq0jttua">
-              <div class="card-user-info">
-                <div class="card-user-name">
-                  Michèle  de Bruyn
+    <div class="full-home-testimonials">
+      <div class="card-student">
+        <div class="card-user">
+                <img width="50" height="50" srcset="https://res.cloudinary.com/wagon/image/upload/c_fill,h_50,w_50/v1481221696/nfpdxxqiguuljq0jttua.jpg 1x, https://res.cloudinary.com/wagon/image/upload/c_fill,h_100,w_100/v1481221696/nfpdxxqiguuljq0jttua.jpg 2x" src="https://res.cloudinary.com/wagon/image/upload/c_fill,h_50,w_50/v1481221696/nfpdxxqiguuljq0jttua.jpg" alt="Nfpdxxqiguuljq0jttua">
+                <div class="card-user-info">
+                  <div class="card-user-name">
+                    Michèle  de Bruyn
+                  </div>
+                  <div class="card-user-batch">
+                    Batch #3, Paris
+                  </div>
                 </div>
-                <div class="card-user-batch">
-                  Batch #3, Paris
+        </div>
+      </div>
+
+      <div class="home-testimonial">
+      <div class="testimonial-card">
+        <p>" C'était génial j'ai appris plein de truc. Il y aura clairement un avant et un aprés Le Studio cela a changé ma vie "</p>
+      </div>
+      </div>
+    </div>
+    <div class="full-home-testimonials">
+      <div class="card-student">
+        <div class="card-user">
+        <img width="50" height="50" srcset="https://res.cloudinary.com/wagon/image/upload/c_fill,h_50,w_50/v1473854652/qsbhptcsbur4evy59p8o.jpg 1x, https://res.cloudinary.com/wagon/image/upload/c_fill,h_100,w_100/v1473854652/qsbhptcsbur4evy59p8o.jpg 2x" src="https://res.cloudinary.com/wagon/image/upload/c_fill,h_50,w_50/v1473854652/qsbhptcsbur4evy59p8o.jpg" alt="Qsbhptcsbur4evy59p8o">
+                <div class="card-user-info">
+                  <div class="card-user-name">
+                    Julien da Silva
+                  </div>
+                  <div class="card-user-batch">
+                    Batch #2, Paris
+                  </div>
                 </div>
-              </div>
+        </div>
+      </div>
+
+      <div class="home-testimonial">
+      <div class="testimonial-card">
+        <p>" Un incroyable voyage qui m'a permis d'acquérir des compétences dans un domaine nouveau et inconnu. Une expérience humaine extrêmement enrichissante, en bref : génial. "</p>
+      </div>
       </div>
     </div>
     </div>
@@ -129,3 +183,59 @@
   </div>
 </div>
 
+
+
+<% content_for(:after_js) do %>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('.go-to-last-name').click(function () {
+            $('#first_name').addClass('hidden');
+            $('#last_name').removeClass('hidden');
+            $('.go-to-last-name').addClass('go-to-email');
+
+        $('.go-to-email').click(function () {
+            $('#last_name').addClass('hidden');
+            $('#email').removeClass('hidden');
+            $('.go-to-email').addClass('go-to-phone');
+
+        $('.go-to-phone').click(function () {
+            $('#email').addClass('hidden');
+            $('#phone').removeClass('hidden');
+            $('.go-to-phone').addClass('go-to-city');
+
+        $('.go-to-city').click(function () {
+            $('#phone').addClass('hidden');
+            $('#city').removeClass('hidden');
+            $('.go-to-city').addClass('go-to-birthday');
+
+        $('.go-to-birthday').click(function () {
+            $('#city').addClass('hidden');
+            $('#birthday').removeClass('hidden');
+            $('.go-to-birthday').addClass('go-to-description');
+
+        $('.go-to-description').click(function () {
+            $('#birthday').addClass('hidden');
+            $('#description').removeClass('hidden');
+            $('.go-to-description').addClass('go-to-motivation');
+
+        $('.go-to-motivation').click(function () {
+            $('#description').addClass('hidden');
+            $('#motivation').removeClass('hidden');
+            $('.go-to-motivation').addClass('go-to-submit');
+
+        $('.go-to-submit').click(function () {
+            $('#motivation').addClass('hidden');
+            $('#submit').removeClass('hidden');
+            $('.go-to-submit').addClass('hidden');
+
+        });
+        });
+        });
+        });
+        });
+        });
+        });
+        });
+    });
+</script>
+<% end %>

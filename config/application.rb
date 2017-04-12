@@ -19,7 +19,6 @@ Bundler.require(*Rails.groups)
 module HowToTechno
   class Application < Rails::Application
     config.generators do |generate|
-      generate.assets false
       config.assets.initialize_on_precompile = false
     end
 

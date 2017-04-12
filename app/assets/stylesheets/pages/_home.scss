@@ -228,7 +228,7 @@ a.link-big {
 }
 
 .home-form-wrapper {
-    background: black;
+    background: white;
     padding: 30px 0;
     padding-bottom: 80px;
 }
@@ -262,6 +262,7 @@ a.link-big {
   z-index: 1;
   border-radius: 4px;
   overflow: hidden;
+  flex-direction: column;
 }
 
 .banner-form h2 {
@@ -299,4 +300,78 @@ a.link-big {
 
 .form-body {
   background-color: #F4F4F4;
+  margin-top: 45px;
+}
+
+.card-user img {
+  border-radius: 50%;
+}
+
+.card-user {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 10px 15px;
+    position: relative;
+    float: right;
+}
+
+.card-user-batch {
+    opacity: .7;
+    font-weight: 100;
+    font-size: 14px;
+}
+
+.card-user-name {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.card-user-info {
+    margin-left: 10px;
+}
+
+.testimonial-card {
+  position: relative;
+    -ms-flex-flow: column;
+    flex-flow: column;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    font-size: 17px;
+    padding: 28px;
+    padding-top: 30px;
+    font-weight: lighter;
+    color: #747070;
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    border-left: 1px solid rgba(116, 112, 112, 0.44);
+    border-bottom: 1px solid rgba(116, 112, 112, 0.44);
+    border-radius: 5px;
+}
+
+.full-home-testimonials {
+  margin-top: 50px;
+}
+
+#new_info {
+  justify-content: space-around;
+    align-content: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.go-to-last-name {
+  border: 1px solid white;
+  border-radius: 10px;
+  padding: 1px 5px 1px 5px;
+  font-weight: lighter;
 }
