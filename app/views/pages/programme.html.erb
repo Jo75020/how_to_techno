@@ -40,7 +40,7 @@
     </div>
 
     </div>
-    <div class="col-md-9">
+    <div class="col-md-9" style="border-left: 1px solid #EAEAEA;">
     <div class="first-tab">
     <div class="feature" style="padding: 10px">
         <div class="feature-header">
@@ -112,18 +112,27 @@
 
     $('#first-tab-left').click(function () {
     $('.first-tab').removeClass('hidden');
+    $('#first-tab-left').toggleClass('active');
     $('.second-tab').addClass('hidden');
     $('.third-tab').addClass('hidden');
     $('.fourth-tab').addClass('hidden');
+    $('#third-tab-left').removeClass('active');
+    $('#second-tab-left').removeClass('active');
     });
     $('#second-tab-left').click(function () {
+    $('#second-tab-left').toggleClass('active');
+    $('#first-tab-left').removeClass('active');
     $('.first-tab').addClass('hidden');
     $('.second-tab').removeClass('hidden');
     $('.third-tab').addClass('hidden');
     $('.fourth-tab').addClass('hidden');
+    $('#third-tab-left').removeClass('active');
     });
 
     $('#third-tab-left').click(function () {
+    $('#third-tab-left').toggleClass('active');
+    $('#first-tab-left').removeClass('active');
+    $('#second-tab-left').removeClass('active');
     $('.first-tab').addClass('hidden');
     $('.second-tab').addClass('hidden');
     $('.third-tab').removeClass('hidden');
