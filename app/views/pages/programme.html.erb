@@ -8,7 +8,7 @@
         </div>
       </div>
       <div class="banner-button">
-      <%= link_to "Postulez pour 2 semaines de formation", programme_path, class: "btn banner-button-item btn-danger btn-lg" %>
+      <%= link_to "Postulez pour 2 semaines de formation", root_path, class: "btn banner-button-item btn-danger btn-lg" %>
       </div>
     </div>
   </div>
@@ -121,7 +121,6 @@
 <% content_for(:after_js) do %>
 <script type="text/javascript">
     $(document).ready(function () {
-
     $('#first-tab-left').click(function () {
     $('.first-tab').removeClass('hidden');
     $('#first-tab-left').toggleClass('active');
