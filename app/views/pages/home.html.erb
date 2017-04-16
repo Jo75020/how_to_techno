@@ -82,53 +82,6 @@
   </div>
 </div>
 
-<div class="home-form-wrapper">
-  <div class="container">
-    <div class="row">
-    <div class="col-md-12">
-      <div class="form-body">
-        <div class="banner-form"  style="background-image: url('<%= image_path "banner-form.jpg" %>');">
-          <h2>Postulez à Paris</h2>
-
-          <%= simple_form_for(@info) do |f| %>
-            <%= f.error_notification %>
-            <div id='first_name'>
-            <%= f.input :first_name, required: true , label: 'Ton Prénom', class: "input-form-home"%>
-            </div>
-            <div id='last_name' class="hidden">
-            <%= f.input :last_name, required: true , label: 'Ton Nom', class: "input-form-home"%>
-            </div>
-            <div id='email' class="hidden">
-            <%= f.input :email, required: true , label: 'Ton Email', class: "input-form-home" %>
-            </div>
-            <div id='phone' class="hidden">
-            <%= f.input :phone, required: true , label: 'Un Telephone', class: "input-form-home" %>
-            </div>
-            <div id='city' class="hidden">
-            <%= f.input :city, required: true , label: 'Ta ville de résidence', class: "input-form-home" %>
-            </div>
-            <div id='birthday' class="hidden">
-            <%= f.input :birthday, required: true , label: 'Ton année de naissance', class: "input-form-home" %>
-            </div>
-            <div id='description' class="hidden">
-            <%= f.input :description, required: true , label: 'Ta description', class: "input-form-home" %>
-            </div>
-            <div id='motivation' class="hidden">
-            <%= f.input :motivation, required: true , label: 'Tes motivations', class: "input-form-home" %>
-            </div>
-            <div id='submit' class="hidden">
-            <%= f.button :submit, label: 'Merci !' %>
-            </div>
-            <div class="go-to-last-name hidden">
-            <span style="margin: 0px; font-weight: 100; font-size: 18px;cursor: alias;">Suivant</span>
-          </div>
-          <% end %>
-
-          </div>
-      </div>
-    </div>
-</div>
-</div>
 
 <div class="container">
 <div class="row">
@@ -190,6 +143,57 @@
       </div>
     </div>
 </div>
+
+
+<div class="home-form-wrapper">
+  <div class="container">
+    <div class="row">
+    <div class="col-md-12">
+      <div class="form-body">
+        <div class="banner-form"  style="background-image: url('<%= image_path "banner-form.jpg" %>');">
+          <h2>Postulez à Paris</h2>
+
+          <%= simple_form_for(@info) do |f| %>
+            <%= f.error_notification %>
+            <div id='first_name'>
+            <%= f.input :first_name, required: true , label: 'Ton Prénom', class: "input-form-home"%>
+            </div>
+            <div id='last_name' class="hidden">
+            <%= f.input :last_name, required: true , label: 'Ton Nom', class: "input-form-home"%>
+            </div>
+            <div id='email' class="hidden">
+            <%= f.input :email, required: true , label: 'Ton Email', class: "input-form-home" %>
+            </div>
+            <div id='phone' class="hidden">
+            <%= f.input :phone, required: true , label: 'Un Telephone', class: "input-form-home" %>
+            </div>
+            <div id='city' class="hidden">
+            <%= f.input :city, required: true , label: 'Ta ville de résidence', class: "input-form-home" %>
+            </div>
+            <div id='birthday' class="hidden">
+            <%= f.input :birthday, required: true , label: 'Ton année de naissance', class: "input-form-home" %>
+            </div>
+            <div id='description' class="hidden">
+            <%= f.input :description, required: true , label: 'Ta description', class: "input-form-home" %>
+            </div>
+            <div id='motivation' class="hidden">
+            <%= f.input :motivation, required: true , label: 'Tes motivations', class: "input-form-home" %>
+            </div>
+            <div id='submit' class="hidden">
+            <%= f.button :submit, label: 'Merci !' %>
+            </div>
+            <div class="go-to-last-name hidden">
+            <span style="margin: 0px; font-weight: 100; font-size: 18px;cursor: alias;">Suivant</span>
+          </div>
+          <% end %>
+
+          </div>
+      </div>
+    </div>
+</div>
+</div>
+
+
 
 
 <% content_for(:after_js) do %>
