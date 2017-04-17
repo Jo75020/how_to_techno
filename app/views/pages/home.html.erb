@@ -9,7 +9,7 @@
       </div>
       <div class="banner-button">
       <%= link_to "Découvrez notre programme", programme_path, class: "banner-button-item hidden-xs" %>
-      <%= link_to "Postulez à la prochaine session", root_path, class: "btn banner-button-item btn-danger btn-lg" %>
+      <a class="btn banner-button-item btn-danger btn-lg" id="check-in" style="margin-left: 0px;">Postulez à la prochaine session</a>
       </div>
     </div>
   </div>
@@ -142,7 +142,7 @@
     <div class="row">
     <div class="col-md-12">
       <div class="form-body">
-        <div class="banner-form"  style="background-image: url('<%= image_path "banner-form.jpg" %>');">
+        <div class="banner-form" id="form" style="background-image: url('<%= image_path "banner-form.jpg" %>');">
           <h2>Postulez à Paris</h2>
 
           <%= simple_form_for(@info) do |f| %>
@@ -192,10 +192,16 @@
 <script type="text/javascript">
     $(document).ready(function () {
 
+        $("#check-in").click(function() {
+            $('html,body').animate({
+                scrollTop: $("#form").offset().top},
+                'slow');
+        });
+
         $("#info_first_name").hover(function(){
             $( ".go-to-last-name" ).fadeTo( "slow" , 1, function() {
             $(".go-to-last-name").removeClass("hidden");
-  });
+         });
 
         });
 
